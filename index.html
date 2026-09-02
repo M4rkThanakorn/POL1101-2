@@ -11,14 +11,35 @@
     <div class="container">
         <header>
             <h1>คลังข้อสอบ POL1101 บทที่ 2</h1>
-            <h2>เรื่อง: หลักประชาธิปไตย (พร้อมเฉลยละเอียด)</h2>
-            <div id="score-board" class="score-board">
-                คะแนนของคุณ: <span id="score">0</span> / <span id="total-questions">0</span>
-            </div>
+            <h2>เรื่อง: หลักประชาธิปไตย</h2>
         </header>
 
         <main id="quiz-container">
-            </main>
+            <!-- ส่วนทำข้อสอบทีละข้อ -->
+            <div id="question-box" class="quiz-card">
+                <div class="progress-bar">
+                    <span id="progress-text">ข้อที่ 1 / 10</span>
+                </div>
+                <h3 id="question-text" class="question-title"></h3>
+                <ul id="options-list" class="options-list"></ul>
+                <div class="actions">
+                    <button id="next-btn" class="btn" onclick="nextQuestion()">ข้อถัดไป ➔</button>
+                    <button id="submit-btn" class="btn btn-submit hidden" onclick="submitQuiz()">ส่งข้อสอบ 🏁</button>
+                </div>
+            </div>
+
+            <!-- ส่วนสรุปผลและเฉลยละเอียด (จะแสดงเมื่อทำเสร็จ) -->
+            <div id="result-box" class="quiz-card hidden">
+                <div class="score-summary">
+                    <h2>🎉 ทำข้อสอบเสร็จสิ้น!</h2>
+                    <p class="score-text">คะแนนของคุณ: <span id="final-score">0</span> / <span id="max-score">10</span></p>
+                    <button class="btn btn-restart" onclick="restartQuiz()">🔄 ทำแบบทดสอบอีกครั้ง</button>
+                </div>
+                <hr class="divider">
+                <h3>📌 เฉลยละเอียดทุกข้อ</h3>
+                <div id="explanations-container"></div>
+            </div>
+        </main>
     </div>
 
     <script src="script.js"></script>
