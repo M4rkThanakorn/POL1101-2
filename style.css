@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Sarabun', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+header h1 {
+    color: #1e3c72;
+    margin-bottom: 5px;
+}
+
+header h2 {
+    color: #555;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.score-board {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #2a5298;
+}
+
+.question-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.question-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.options-list {
+    list-style: none;
+}
+
+.option-item {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option-item:hover {
+    background: #eef2f7;
+    border-color: #cbd5e1;
+}
+
+.option-item.selected-correct {
+    background-color: #d1e7dd;
+    border-color: #0f5132;
+    color: #0f5132;
+    font-weight: bold;
+}
+
+.option-item.selected-wrong {
+    background-color: #f8d7da;
+    border-color: #842029;
+    color: #842029;
+}
+
+.option-item.show-correct {
+    background-color: #d1e7dd;
+    border-color: #0f5132;
+    color: #0f5132;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.explanation-box {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f4f8;
+    border-left: 5px solid #1e3c72;
+    border-radius: 4px;
+}
+
+.explanation-box.active {
+    display: block;
+}
+
+.explanation-title {
+    font-weight: bold;
+    color: #1e3c72;
+    margin-bottom: 8px;
+}
+
+.explanation-item {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.correct-text {
+    color: #0f5132;
+    font-weight: bold;
+}
+
+.wrong-text {
+    color: #842029;
+}
